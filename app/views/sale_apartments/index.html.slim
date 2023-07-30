@@ -1,1 +1,4 @@
 = render @sale_apartments
+
+-if user_signed_in?
+  p = link_to 'Create new sale apartment', new_sale_apartment_path
