@@ -1,5 +1,9 @@
 h1 "Start page"
 
+p = link_to 'Log in', new_user_session_path
+p = link_to 'Log out', destroy_user_session_path, method: :delete
+p = link_to 'Sigh up', new_user_registration_path
+
 p = link_to 'Sale apartments', sale_apartments_path
 p = link_to 'Rent apartments', rent_apartments_path
 p = link_to 'Daily apartments', daily_apartments_path
