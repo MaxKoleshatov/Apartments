@@ -15,6 +15,7 @@ feature 'user can see all announcement if click' do
   scenario "user can see all sale if click link" do
     visit root_path
     click_on 'Sale apartments'
+    # save_and_open_page
     expect(page).to have_content sale_apartment_1.description_sale
     expect(page).to have_content sale_apartment_2.description_sale
   end

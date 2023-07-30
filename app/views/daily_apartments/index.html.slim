@@ -1,1 +1,4 @@
 = render @daily_apartments
+
+-if user_signed_in?
+  p = link_to 'Create new daily apartment', new_daily_apartment_path
