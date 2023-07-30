@@ -1,0 +1,2 @@
+class DailyApartment < ApplicationRecord
+end
