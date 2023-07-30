@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_29_141901) do
   create_table "daily_apartments", force: :cascade do |t|
     t.string "square_apartment", null: false
     t.string "price_daily_apartment", null: false
-    t.string "description"
+    t.string "description_daily"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_29_141901) do
   create_table "rent_apartments", force: :cascade do |t|
     t.string "square_apartment", null: false
     t.string "price_mount_apartment", null: false
-    t.string "description"
+    t.string "description_rent"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -43,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_29_141901) do
     t.string "square_apartment", null: false
     t.string "price_apartment", null: false
     t.string "price_per_square_meter_apartment", null: false
-    t.string "description"
+    t.string "description_sale"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root to: 'welcome#index'
+
+  resources :sale_apartments
+  resources :rent_apartments
+  resources :daily_apartments
 end
