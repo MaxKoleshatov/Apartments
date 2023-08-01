@@ -1,3 +1,5 @@
 class SaleApartment < ApplicationRecord
- belongs_to :user
+  belongs_to :user
+
+  include Last
 end
