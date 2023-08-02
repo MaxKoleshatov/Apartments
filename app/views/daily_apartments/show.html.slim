@@ -3,3 +3,6 @@ p= @daily_apartment.user.number
 p= @daily_apartment.square_apartment
 p= @daily_apartment.price_daily_apartment
 p= @daily_apartment.description_daily
+
+- if @daily_apartment.file.attached?
+  =image_tag @daily_apartment.file, style: "width: 250px"

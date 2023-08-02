@@ -24,8 +24,7 @@ class RentApartmentsController < ApplicationController
   private
 
   def rent_apartment_params
-    params.require(:rent_apartment).permit(:square_apartment, :price_mount_apartment, :description_rent)
+    params.require(:rent_apartment).permit(:square_apartment, :price_mount_apartment, :description_rent, :file)
   end
 end
-  
-    
+     
