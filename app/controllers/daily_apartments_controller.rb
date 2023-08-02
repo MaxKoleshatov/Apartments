@@ -24,6 +24,6 @@ class DailyApartmentsController < ApplicationController
   private
 
   def daily_apartment_params
-    params.require(:daily_apartment).permit(:square_apartment, :price_daily_apartment, :description_daily)
+    params.require(:daily_apartment).permit(:square_apartment, :price_daily_apartment, :description_daily, :file)
   end
 end

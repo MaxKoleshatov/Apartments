@@ -24,7 +24,7 @@ class SaleApartmentsController < ApplicationController
   private
 
   def sale_apartment_params
-    params.require(:sale_apartment).permit(:square_apartment, :price_apartment, :price_per_square_meter_apartment, :description_sale)
+    params.require(:sale_apartment).permit(:square_apartment, :price_apartment, :price_per_square_meter_apartment, :description_sale, :file)
   end
 end
   
