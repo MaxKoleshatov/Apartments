@@ -1,24 +1,8 @@
 # README
+Rails 7.0.6
+Ruby 3.0.0
+БД PostgreSQL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Данный проект реализован в качестве тестового задания. Пользователь может создавать три типа обьявлений - по продаже, долгосрочной и посуточной аренде квартир. Реализована аутентификация пользователей с помощью Devise. Разработка осуществлялась через TDD/BDD. Тестирование проводилось через rspec. Добавлена возможность просмотра обьявлений выложенных только за последние сутки.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Стили не применял для экономии времени. Красоту не наводил. 
