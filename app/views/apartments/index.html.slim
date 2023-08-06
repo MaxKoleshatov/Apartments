@@ -1,0 +1,5 @@
+= render @apartments
+
+-if user_signed_in?
+  p = link_to 'Create new apartment', new_apartment_path
+  p = link_to 'Last Day', last_day_path

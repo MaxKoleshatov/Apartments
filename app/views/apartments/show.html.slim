@@ -1,0 +1,9 @@
+p= @apartment.user.name
+p= @apartment.user.number
+p= @apartment.square
+p= @apartment.price
+p= @apartment.price_meter
+p= @apartment.description
+
+- if @apartment.file.attached?
+  =image_tag @apartment.file, style: "width: 250px"
