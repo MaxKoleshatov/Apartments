@@ -7,11 +7,12 @@ feature 'The user can create announcement' do
     scenario 'Authenticated user can create a sale announcement ' do
       sign_in(user)
       click_on "Sale apartment"
-      click_on "Create new sale apartment"     
-      fill_in 'Square apartment', with: 'SATest'
-      fill_in 'Price apartment', with: 'PAtest'
-      fill_in 'Price per square meter apartment', with: 'PSMATest'
-      fill_in 'Description sale', with: 'Dtest'
+      click_on "Create new apartment"     
+      fill_in 'Square', with: 'SATest'
+      fill_in 'Price', with: 'PAtest'
+      fill_in 'Price meter', with: 'PSMATest'
+      fill_in 'Option', with: 'sale'
+      fill_in 'Description', with: 'Dtest'
 
       click_on 'Create'
       expect(page).to have_content 'You have created sale announcement'
@@ -20,10 +21,11 @@ feature 'The user can create announcement' do
     scenario 'Authenticated user can create a rent announcement ' do
       sign_in(user)
       click_on "Rent apartment"
-      click_on "Create new rent apartment"     
-      fill_in 'Square apartment', with: 'SATest'
-      fill_in 'Price mount apartment', with: 'PMAtest'
-      fill_in 'Description rent', with: 'Dtest'
+      click_on "Create new apartment"     
+      fill_in 'Square', with: 'SATest'
+      fill_in 'Price', with: 'PMAtest'
+      fill_in 'Option', with: 'rent'
+      fill_in 'Description', with: 'Dtest'
       click_on 'Create'
       expect(page).to have_content 'You have created rent announcement'
     end
@@ -31,10 +33,12 @@ feature 'The user can create announcement' do
     scenario 'Authenticated user can create a daily announcement ' do
       sign_in(user)
       click_on "Daily apartment"
-      click_on "Create new daily apartment"     
-      fill_in 'Square apartment', with: 'SATest'
-      fill_in 'Price daily apartment', with: 'PDAtest'
-      fill_in 'Description daily', with: 'Dtest'
+      click_on "Create new apartment"     
+      fill_in 'Square', with: 'SATest'
+      fill_in 'Price', with: 'PDAtest'
+      fill_in 'Option', with: 'daily'
+      fill_in 'Description', with: 'Dtest'
+
       click_on 'Create'
       expect(page).to have_content 'You have created daily announcement'
     end
@@ -46,19 +50,19 @@ feature 'The user can create announcement' do
     scenario "Unregistered user cant create a new sale announcement" do
       visit root_path
       click_on "Sale apartment"
-      expect(page).not_to have_link 'Create new sale apartment'
+      expect(page).not_to have_link 'Create new apartment'
     end
     
     scenario "Unregistered user cant create a new rent announcement" do
       visit root_path
       click_on "Rent apartment"
-      expect(page).not_to have_link 'Create new rent apartment'
+      expect(page).not_to have_link 'Create new apartment'
     end
 
     scenario "Unregistered user cant create a new daily announcement" do
       visit root_path
       click_on "Daily apartment"
-      expect(page).not_to have_link 'Create new daily apartment'
+      expect(page).not_to have_link 'Create new apartment'
     end
   end
 end

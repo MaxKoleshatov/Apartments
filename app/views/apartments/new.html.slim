@@ -1,0 +1,27 @@
+= form_with model: @apartment, local: true do |form|
+  
+    p 
+      = form.label :square 
+      = form.text_field :square
+
+    p 
+      = form.label :price 
+      = form.text_field :price
+  
+    p
+      = form.label :price_meter 
+      = form.text_field :price_meter
+
+    p
+      = form.label :option
+      = form.text_field :option
+
+    p
+      = form.label :description
+      = form.text_field :description
+
+    p
+      = form.label :file
+      = form.file_field :file
+
+    = form.submit 
